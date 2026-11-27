@@ -1,12 +1,15 @@
 # Lease Loop · Northfina × Hive Helsinki hackathon
 
-> **Final submission.** This is my entry as a solo participant for the **Lease Loop** challenge, 5–6 November 2026 at Hive Helsinki. The hackathon is over and the repo is kept as it was handed in, for anyone curious to see or run the project.
+[![CI](https://github.com/slowTake/northfina-lease-loop/actions/workflows/ci.yml/badge.svg)](https://github.com/slowTake/northfina-lease-loop/actions/workflows/ci.yml)
 
-The challenge: build a circular-economy leasing app where one e-bike, laptop or tractor lives three lives. Our Lease Loop takes an item from the catalogue to a price, an application, a signed contract and monthly invoices, then back again as a refurbished, re-priced second-life item. Every cent is calculated by plain rules and tested, and the customer always sees how their price was made.
+> **Final submission.** This is my solo entry for the **Lease Loop** challenge, 5–6 November 2026 at Hive Helsinki. The code is as I handed it in at `3ba799f`, plus the demo presets added the next morning (D-059). The hackathon is over; the repo stays up for anyone curious to see or run the project.
+
+The challenge: build a circular-economy leasing app where one e-bike, laptop or tractor lives three lives. My Lease Loop takes an item from the catalogue to a price, an application, a signed contract and monthly invoices, then back again as a refurbished, re-priced second-life item. Every cent is calculated by plain rules and tested, and the customer always sees how their price was made.
 
 - 📋 **The challenge:** [CHALLENGE.md](CHALLENGE.md)
 - 📐 **Engineering rules:** [RULES.md](RULES.md)
 - 🗂️ **The data pack:** [data/DATA.md](data/DATA.md)
+- 🧭 **Every decision and why:** [docs/decisions.md](docs/decisions.md)
 
 **Northfina** is a Helsinki-based leasing platform. It started as Etufillari, a bike-leasing service, and now leases any kind of asset. This repo is a small, independent playground, not Northfina's product code.
 
@@ -65,6 +68,10 @@ When an item comes back, the engine values it from its age, condition and usage,
 - **Money is integer euro cents**, rounded once with a documented half-up rule.
 - **Every data change writes an audit row** in the same transaction; see the audit log at `/audit`.
 - **No AI in the product.** Pricing, eligibility and invoicing are rules and data. `npm run check:no-ai` enforces it.
+
+## What the organisers wrote, and what I wrote
+
+The organisers' starter is the first six commits (up to `33ab594`): the Next.js, Prisma and tooling setup, the data pack and its loaders, a walking-skeleton catalogue with the API envelope and audit log, the challenge and rules, and the `organizer/` script. Everything after that is mine: the pricing, VAT, invoicing, application, contract, early-exit, second-life and passport domains, the UI, the translations and the decision log. I built it with Claude Code as a pair, under the rules in [AGENTS.md](AGENTS.md) and [CLAUDE.md](CLAUDE.md); the product itself has no AI in it.
 
 ## License
 

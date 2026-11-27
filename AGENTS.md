@@ -1,6 +1,6 @@
 # Instructions for AI coding agents
 
-You are helping a hackathon team build **Lease Loop**. The challenge is in `CHALLENGE.md`; the engineering rules in `RULES.md` are judged and must be followed. The short version:
+You are helping build **Lease Loop**, a solo hackathon entry. The challenge is in `CHALLENGE.md`; the engineering rules in `RULES.md` were judged and must still be followed. The short version:
 
 - **No AI inside the product.** Never add an AI, ML or LLM SDK, model or API call to the app. All product logic is rules, data and algorithms. `npm run check:no-ai` enforces this.
 - **Business logic goes in `src/domain/`** as pure functions: no I/O, no database, no `fetch`, no `Date.now()` / `new Date()` / `Math.random()`. Pass dates (ISO `YYYY-MM-DD`) and data in as arguments. Every function gets Vitest tests next to it, including edge cases.
@@ -11,7 +11,7 @@ You are helping a hackathon team build **Lease Loop**. The challenge is in `CHAL
 - **UI strings** go in `src/i18n/messages/{en,fi,sv,et}.json`, with the same keys in all four.
 - **Files stay under 600 lines.** Split by responsibility.
 - **Commits** use conventional messages: `type(scope): subject`. Never use `git commit --no-verify` or `git push --no-verify`. If a hook fails, fix the cause.
-- Before saying a change is done, run `npm run check:all`. There is no CI (D-060): this is the only check before merge.
+- Before saying a change is done, run `npm run check:all`. It's what CI runs (D-061).
 - Read `data/DATA.md` before using the data pack. Schemas for every data file are in `src/data/schemas.ts`.
 
 <!-- BEGIN:nextjs-agent-rules -->
