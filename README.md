@@ -1,6 +1,6 @@
 # Lease Loop · Northfina × Hive Helsinki hackathon
 
-[![CI](https://github.com/slowTake/northfina-lease-loop/actions/workflows/ci.yml/badge.svg)](https://github.com/slowTake/northfina-lease-loop/actions/workflows/ci.yml)
+[![CI](https://github.com/slowTake/Leaseloop-northfina-hackathon/actions/workflows/ci.yml/badge.svg)](https://github.com/slowTake/Leaseloop-northfina-hackathon/actions/workflows/ci.yml)
 
 > **Final submission.** This is my solo entry for the **Lease Loop** challenge, 5–6 November 2026 at Hive Helsinki. The code is as I handed it in at `3ba799f`, plus the demo presets added the next morning (D-059). The hackathon is over; the repo stays up for anyone curious to see or run the project.
 
@@ -20,8 +20,8 @@ The challenge: build a circular-economy leasing app where one e-bike, laptop or 
 You need **Git** and **Node.js 22** (with [nvm](https://github.com/nvm-sh/nvm): `nvm install` reads `.nvmrc`).
 
 ```bash
-git clone https://github.com/slowTake/northfina-lease-loop.git
-cd northfina-lease-loop
+git clone https://github.com/slowTake/Leaseloop-northfina-hackathon.git
+cd Leaseloop-northfina-hackathon
 nvm install          # Node 22
 npm ci               # installs dependencies
 npm run db:setup     # creates .env and a local SQLite database with the 30 assets
